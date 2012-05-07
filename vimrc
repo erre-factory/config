@@ -224,7 +224,8 @@ set title
 
 " 9 using the mouse
 
-"mouse
+set mouse=a
+
 "mousemodel
 "mousetime
 "ttymouse
@@ -407,7 +408,7 @@ set backup
 "backupcopy
 
 "set backupdir=.,~/tmp,~/
-set backupdir=~/.vimbackup
+set backupdir=~/.vim-backup
 
 ""backupext
 "autowrite
@@ -423,7 +424,7 @@ set backupdir=~/.vimbackup
 "19 the swap file
 
 "set directory=.,/home/tak/tmp,/var/tmp,/tmp
-set directory=~/.vimswap
+set directory=~/.vim-backup
 
 "swapfile
 "swapsync
@@ -622,4 +623,11 @@ highlight ShowMarksHLm ctermfg=blue ctermbg=black guifg=red guibg=green
 "nmap <F12> :ShowMarksToggle<CR>
 "imap <F12> <C-O>:ShowMarksToggle<CR>
 
+
+" clipboard 無名レジスタに入るデータを *レジスタにも入れる
+" set clipboard+=unnamed
+
+
+" vimcommander
+" noremap <silent> <F11> :cal VimCommanderToggle ()<CR>
 
