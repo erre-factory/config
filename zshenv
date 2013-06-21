@@ -41,3 +41,6 @@ export CVSEDITOR="vim"
 ##if [[ $SHLVL == 1 && ! -o LOGIN ]]; then
 ##    source ~/.zpath
 ##fi
+
+[ -f ~/.zshenv.local ] && source ~/..zshenv.local
+
