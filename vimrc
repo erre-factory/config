@@ -539,11 +539,14 @@ set undodir=.vimundo
 
 set encoding=japan
 if has('iconv')
-	if has('guess_encode')
-		set fileencodings=guess,ucs-bom
-	else
-		set fileencodings=ucs-bom
-	endif
+"	if has('guess_encode')
+"		set fileencodings=guess,ucs-bom
+"	else
+"		set fileencodings=ucs-bom
+"	endif
+"	guess disable
+	set fileencodings=ucs-bom
+
 	set fileencodings+=ucs-2le,ucs-2
 	set fileencodings+=iso-2022-jp-3
 	if &encoding !=? 'utf-8'
