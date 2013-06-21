@@ -12,4 +12,4 @@
 
 uptime
 fortune
-log
+#log
