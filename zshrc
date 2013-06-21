@@ -8,6 +8,9 @@
 # options, key bindings, etc.
 #
 
+# :-)
+# http://news.mynavi.jp/column/zsh/index.html
+# http://gihyo.jp/dev/serial/01/zsh-book
 #
 # ¥í¥°¥¤¥ó¥·¥§¥ë¤È¤·¤Æzsh¤¬µ¯Æ°¤µ¤ì¤¿¾ì¹ç
 # 1 ~/.zshenv
@@ -34,19 +37,20 @@ typeset -U path
 
 
 # Set up aliases
-alias mv='nocorrect mv'       # no spelling correction on mv
 alias cp='nocorrect cp'       # no spelling correction on cp
 alias mkdir='nocorrect mkdir' # no spelling correction on mkdir
+alias mv='nocorrect mv'       # no spelling correction on mv
 
+alias cflow="cflow -ACGP" # -g : graphviz dot
+alias df='df -h'
 alias diff=colordiff
-alias df="df -h"
-alias du="du -h"
+alias du='du -h'
+alias grep='grep --color=auto'
 alias less='lv -c'
-alias lv='lv -c'
 # FreeBSD ls
-alias ls="ls -w -G"
+alias ls='ls -w -G'
 # FSF coreutils ls
-#alias ls="ls --color"
+#alias ls='ls --color'
 alias lv='lv -c'
 alias tar=gtar
 
@@ -59,6 +63,10 @@ alias -s txt=lv
 # key bind
 bindkey -e
 
+# compinit
+# git-completion.bash
+# git-completion.zsh -> _git
+fpath=(~/.zsh/completion $fpath)
 
 # Setup new style completion system. To see examples of the old style (compctl
 # based) programmable completion, check Misc/compctl-examples in the zsh
@@ -123,29 +131,35 @@ colors
 # RPROMPT RPROMPT2
 # escape (Ctrl -v Esc) or \e
 
-#MCH=`hostname -s | sed s/foo//`
-#PROMPT=" [%~]
-#%B`whoami`@${MCH:q}:%b<%h>%(!.#.%%) "
+setopt prompt_subst
 
-PROMPT=" %{[37m%}[%{[32m%}${HOST%%.*}:%{[34m%}%/%{[37m%}]%{[m%}
-%(!.%B`whoami`%b.`whoami`)<%h>%(!.%B%{[33m%}%?#%{[m%}%b.%%) "
+export GIT_PS1_SHOWDIRTYSTATE=y
+export GIT_PS1_SHOWSTASHSTATE=y
+export GIT_PS1_SHOWUNTRACKEDFILES=y
+export GIT_PS1_SHOWUPSTREAM=auto
+# contains branch describe default
+export GIT_PS1_DESCRIBE_STYLE=branch
+export GIT_PS1_SHOWCOLORHINTS=y
+
+PROMPT=' %{[37m%}[%{[32m%}${HOST%%.*}:%{[m%}%/%{[37m%}]%{[m%}
+%(!.%B`whoami`%b.`whoami`)<%h>%(!.%B%{[33m%}%?#%{[m%}%b.%%) '
+
+GITPROMPT="/usr/local/share/git-core/contrib/completion/git-prompt.sh"
+[ -f "${GITPROMPT}" ] && source "${GITPROMPT}" && PROMPT='$(__git_ps1 "(%s)")
+'${PROMPT}
+
+#PROMPT='$(__git_ps1 "(%s)")
+# %{[37m%}[%{[32m%}${HOST%%.*}:%{[m%}%/%{[37m%}]%{[m%}
+#%(!.%B`whoami`%b.`whoami`)<%h>%(!.%B%{[33m%}%?#%{[m%}%b.%%) '
 
 case ${UID} in
 0)
-#    PROMPT="%B%{[33m%}%?#%{[m%}%b "
     PROMPT2="%B%{[37m%}%_%{[33m%}#%{[m%}%b "
     SPROMPT="%B%{[37m%}%r is correct? [n,y,a,e]:%{[m%}%b "
-#    RPROMPT="%{[33m%}%/%{[37m%}]%{[m%}"
-#    [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
-#        RPROMPT="%{[37m%}[%{[31m%}${HOST%%.*}:%{[33m%}%/%{[37m%}]%{[m%}"
     ;;
 *)
-#    PROMPT="%{[34m%}%%%{[m%} "
     PROMPT2="%{[37m%}%_%{[34m%}%%%{[m%} "
     SPROMPT="%{[37m%}%r is correct? [n,y,a,e]:%{[m%} "
-#    RPROMPT="%{[37m%}[%{[34m%}%/%{[37m%}]%{[m%}"
-#    [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
-#        RPROMPT="%{[37m%}[%{[32m%}${HOST%%.*}:%{[34m%}%/%{[37m%}]%{[m%}"
     ;;
 esac
 
@@ -171,5 +185,7 @@ cons25)
     ;;
 esac
 
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 [ -f ~/.zshrc.experimental ] && source ~/.zshrc.experimental
+
