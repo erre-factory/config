@@ -42,5 +42,5 @@ export CVSEDITOR="vim"
 ##    source ~/.zpath
 ##fi
 
-[ -f ~/.zshenv.local ] && source ~/..zshenv.local
+[ -f ~/.zshenv.local ] && source ~/.zshenv.local
 
