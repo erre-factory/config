@@ -45,7 +45,13 @@ alias cflow="cflow -ACGP" # -g : graphviz dot
 alias df='df -h'
 alias diff=colordiff
 alias du='du -h'
-alias grep='grep --color=auto'
+if [[ -x /usr/local/bin/grep ]]; then
+    # GNU grep
+    alias grep='GREP_COLORS=ne /usr/local/bin/grep --color=always'
+else
+    # GNU grep old version
+    alias grep='grep --color=auto'
+fi
 alias less='lv -c'
 # FreeBSD ls
 alias ls='ls -w -G'
