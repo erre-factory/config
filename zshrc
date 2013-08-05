@@ -72,7 +72,7 @@ bindkey -e
 # compinit
 # git-completion.bash
 # git-completion.zsh -> _git
-fpath=(~/.zsh/completion $fpath)
+fpath=(~/.zsh/completion ~/github/zsh-completions/src $fpath)
 
 # Setup new style completion system. To see examples of the old style (compctl
 # based) programmable completion, check Misc/compctl-examples in the zsh
