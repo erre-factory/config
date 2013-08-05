@@ -80,6 +80,36 @@ fpath=(~/.zsh/completion $fpath)
 autoload -U compinit
 compinit
 
+compdef _gcc clang33
+compdef _gcc c++46
+#compdef cpp46
+compdef _gcc g++46
+compdef _gcc gcc46
+#compdef gcov46
+#compdef gfortran46
+compdef _gcc x86_64-portbld-freebsd9.1-c++46
+compdef _gcc x86_64-portbld-freebsd9.1-g++46
+compdef _gcc x86_64-portbld-freebsd9.1-gcc-4.6.3
+compdef _gcc x86_64-portbld-freebsd9.1-gcc46
+#compdef x86_64-portbld-freebsd9.1-gfortran46
+compdef _gcc c++49
+#compdef cpp49
+compdef _gcc g++49
+#compdef gcc-ar49
+compdef _nm gcc-nm49
+compdef _ranlib gcc-ranlib49
+compdef _gcc gcc49
+#compdef gcov49
+#compdef gfortran49
+compdef _gcc x86_64-portbld-freebsd9.1-c++49
+compdef _gcc x86_64-portbld-freebsd9.1-g++49
+compdef _gcc x86_64-portbld-freebsd9.1-gcc-4.9.0
+#compdef x86_64-portbld-freebsd9.1-gcc-ar49
+compdef _nm x86_64-portbld-freebsd9.1-gcc-nm49
+compdef _ranlib x86_64-portbld-freebsd9.1-gcc-ranlib49
+compdef _gcc x86_64-portbld-freebsd9.1-gcc49
+#compdef x86_64-portbld-freebsd9.1-gfortran49
+
 setopt complete_aliases
 
 # Completion Styles
