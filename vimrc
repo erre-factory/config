@@ -537,28 +537,28 @@ set undodir=.vimundo
 " B
 " w ++enc={utf-8,euc-jp,...} filename
 
-set encoding=japan
-if has('iconv')
-"	if has('guess_encode')
-"		set fileencodings=guess,ucs-bom
-"	else
-"		set fileencodings=ucs-bom
+"set encoding=japan
+"if has('iconv')
+""	if has('guess_encode')
+""		set fileencodings=guess,ucs-bom
+""	else
+""		set fileencodings=ucs-bom
+""	endif
+""	guess disable
+"	set fileencodings=ucs-bom
+"
+"	set fileencodings+=ucs-2le,ucs-2
+"	set fileencodings+=iso-2022-jp-3
+"	if &encoding !=? 'utf-8'
+"		set fileencodings+=utf-8
 "	endif
-"	guess disable
-	set fileencodings=ucs-bom
-
-	set fileencodings+=ucs-2le,ucs-2
-	set fileencodings+=iso-2022-jp-3
-	if &encoding !=? 'utf-8'
-		set fileencodings+=utf-8
-	endif
-	if &encoding !=? 'cp932'
-		set fileencodings+=cp932
-	endif
-	if &encoding !=? 'euc-jp' && &encoding !=? 'euc-jisx0213'
-		set fileencodings+=euc-jisx0213,euc-jp
-	endif
-endif
+"	if &encoding !=? 'cp932'
+"		set fileencodings+=cp932
+"	endif
+"	if &encoding !=? 'euc-jp' && &encoding !=? 'euc-jisx0213'
+"		set fileencodings+=euc-jisx0213,euc-jp
+"	endif
+"endif
 
 
 " default : current locale
