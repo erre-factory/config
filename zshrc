@@ -230,6 +230,8 @@ cons25)
     ;;
 esac
 
+[ -f /usr/local/share/git-core/contrib/diff-highlight/diff-highlight ] && path=($path /usr/local/share/git-core/contrib/diff-highlight)
+
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 [ -f ~/.zshrc.experimental ] && source ~/.zshrc.experimental
