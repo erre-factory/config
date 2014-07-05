@@ -1,0 +1,22 @@
+[core]
+	editor = vim
+	pager = "lv -c"
+[color]
+	diff = always
+	grep = always
+[diff]
+#	algorithm = patience
+	algorithm = histogram
+[merge]
+	conflictstyle = diff3
+	tool = vimdiff
+	stat = true
+[pager]
+	diff = diff-highlight | lv -c
+	log  = diff-highlight | lv -c
+	show = diff-highlight | lv -c
+[push]
+	default = simple
+[rebase]
+#	autosquash = true
+	stat = true
