@@ -64,6 +64,8 @@
 "	endif
 "endif
 
+scriptencoding utf-8
+
 
 
 " 1 important
