@@ -13,17 +13,17 @@
 ""options
 ""
 ""set termcap
-""set {option}? : ¸½ºß¤ÎÀßÄêÃÍ
-""set {option}& : default¤ËÌá¤¹
+""set {option}? : ç¾åœ¨ã®è¨­å®šå€¤
+""set {option}& : defaultã«æˆ»ã™
 
-"encoding, fileencoding¤¬¤ª¤«¤·¤¤»ş¤Ï¡¢
+"encoding, fileencodingãŒãŠã‹ã—ã„æ™‚ã¯ã€
 "iconv -l
 ":language
-"¤ò³ÎÇ§¤·¤Ş¤·¤ç¤¦¡£
+"ã‚’ç¢ºèªã—ã¾ã—ã‚‡ã†ã€‚
 "
-" ¤³¤Î¥Õ¥¡¥¤¥ë¤Ç¤Ï¡¢libiconv¤¬¿·¤·¤¤¤³¤È¤¬Á°Äó
-" converters/libiconv¤¬ EXTRA_ENCODINGS ÉÕ¤­¤Ç
-" ¥³¥ó¥Ñ¥¤¥ë¤µ¤ì¤Æ¤¤¤ë¤«³ÎÇ§¤·¤Ş¤·¤ç¤¦¡£
+" ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã§ã¯ã€libiconvãŒæ–°ã—ã„ã“ã¨ãŒå‰æ
+" converters/libiconvãŒ EXTRA_ENCODINGS ä»˜ãã§
+" ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã•ã‚Œã¦ã„ã‚‹ã‹ç¢ºèªã—ã¾ã—ã‚‡ã†ã€‚
 
 "-----------------------------------------------------------------------------
 " 1 important
@@ -111,7 +111,7 @@ set cmdheight=1
 set list
 
 "set listchars=tab:^\ ,extends:<,trail:-,eol:<
-"eolÇÑ»ß, precedesÄÉ²Ã,
+"eolå»ƒæ­¢, precedesè¿½åŠ ,
 set listchars=tab:^\ ,extends:>,precedes:<,trail:-
 
 ""number
@@ -158,7 +158,7 @@ set laststatus=2
 "hi StatusLine term=NONE cterm=NONE ctermfg=black ctermbg=white
 
 set statusline=%y%{GetStatusEx()}%F[%n]%m%r%=[%B]<%c:%l/%L>(%p%%)
-" Ê¸»ú¥¨¥ó¥³¡¼¥Ç¥£¥ó¥° & ²ş¹Ô¥³¡¼¥É¼èÆÀ
+" æ–‡å­—ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‡ã‚£ãƒ³ã‚° & æ”¹è¡Œã‚³ãƒ¼ãƒ‰å–å¾—
 function! GetStatusEx()
 	let str = ''
 	let str = str . '' . &fileformat . ']'
@@ -232,7 +232,7 @@ set mouse=a
 
 
 "10 printing
-" ¾ÊÎ¬
+" çœç•¥
 
 
 "11 messages and info
@@ -290,14 +290,14 @@ set formatoptions+=mM
 ""pumheight
 "completefunc
 
-"¥ª¥à¥ËÊä´°¤ò»È¤¦¤Ë¤ÏÀßÄê¤¬É¬Í×¡£
-"ºÇÄã¤Ç¤â¥Õ¥¡¥¤¥ë¥¿¥¤¥×¥×¥é¥°¥¤¥ó¤ò"Í­¸ú¤Ë¤·"¤Æ¤ª¤¯É¬Í×¤¬¤¢¤ë¡£
-".vimrc ¤Ë°Ê²¼¤Î¹Ô¤ò½ñ¤­²Ã¤¨¤Æ¤¯¤À¤µ¤¤:
+"ã‚ªãƒ ãƒ‹è£œå®Œã‚’ä½¿ã†ã«ã¯è¨­å®šãŒå¿…è¦ã€‚
+"æœ€ä½ã§ã‚‚ãƒ•ã‚¡ã‚¤ãƒ«ã‚¿ã‚¤ãƒ—ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã‚’"æœ‰åŠ¹ã«ã—"ã¦ãŠãå¿…è¦ãŒã‚ã‚‹ã€‚
+".vimrc ã«ä»¥ä¸‹ã®è¡Œã‚’æ›¸ãåŠ ãˆã¦ãã ã•ã„:
 "   filetype plugin on
-"   ¤Ş¤¿¤Ï:
+"   ã¾ãŸã¯:
 "	filetype plugin indent on
-"C ¤Î¥½¡¼¥¹¤Ç¥ª¥à¥ËÊä´°¤ò¹Ô¤¦¤Ë¤Ï tags ¥Õ¥¡¥¤¥ë¤¬É¬Í×¤Ç¤¢¤ë¡£Exuberant ctags¤Ï
-"Êä´°¤ËÉ¬Í×¤ÊÉÕ²Ã¾ğÊó¤ò½ĞÎÏ¤¹¤ë¤¿¤á¡¢Exuberant ctags ¤ò»È¤¦¤È¤è¤¤¡£
+"C ã®ã‚½ãƒ¼ã‚¹ã§ã‚ªãƒ ãƒ‹è£œå®Œã‚’è¡Œã†ã«ã¯ tags ãƒ•ã‚¡ã‚¤ãƒ«ãŒå¿…è¦ã§ã‚ã‚‹ã€‚Exuberant ctagsã¯
+"è£œå®Œã«å¿…è¦ãªä»˜åŠ æƒ…å ±ã‚’å‡ºåŠ›ã™ã‚‹ãŸã‚ã€Exuberant ctags ã‚’ä½¿ã†ã¨ã‚ˆã„ã€‚
 "
 "Ctrl-x Ctrl-o
 "omnifunc
@@ -339,7 +339,7 @@ set noexpandtab
 set cindent
 
 "set cinoptions=:0,t0,+4,(0
-" +N : ÂåÆş¤ò¹ÍÎ¸¤¹¤ë¤È¤³¤ì¤Ç¤Á¤ç¤¦¤ÉÎÉ¤¤
+" +N : ä»£å…¥ã‚’è€ƒæ…®ã™ã‚‹ã¨ã“ã‚Œã§ã¡ã‚‡ã†ã©è‰¯ã„
 set cinoptions=:0,t0,+4,(0,)500,*500
 
 ""cinkeys
@@ -462,7 +462,7 @@ set undodir=.vimundo
 
 "21 executing external commands
 
-"sh¤ò¸ÇÄê¤·¤Ê¤¯¤Æ¤¤¤¤¤«¤Ê¤¡
+"shã‚’å›ºå®šã—ãªãã¦ã„ã„ã‹ãªã
 "shell
 ""shellquote
 ""shellxquote
@@ -473,7 +473,7 @@ set undodir=.vimundo
 "set equalprg=indent\ -kr
 " gq
 "formatprg
-" K, info¤½¤ÎÂ¾¤ò³èÍÑ¤·¤Æ¤âÎÉ¤¤¤«¤â
+" K, infoãã®ä»–ã‚’æ´»ç”¨ã—ã¦ã‚‚è‰¯ã„ã‹ã‚‚
 "keywordprg
 ""warn
 
@@ -517,7 +517,7 @@ set undodir=.vimundo
 ""langmap
 
 "iminsert
-"´Ö°ã¤¨¤Æ¤¤¤ë¤Ã¤İ¤¤
+"é–“é•ãˆã¦ã„ã‚‹ã£ã½ã„
 "map <silent> <ESC> <ESC>:set iminsert=0<CR>
 
 "imsearch
@@ -599,16 +599,16 @@ set undodir=.vimundo
 colorscheme slate
 
 
-" Á´³Ñ¥¹¥Ú¡¼¥¹¶¯Ä´
+" å…¨è§’ã‚¹ãƒšãƒ¼ã‚¹å¼·èª¿
 highlight ZenkakuSpace guibg=white
 highlight ZenkakuSpace ctermbg=white
-match ZenkakuSpace /¡¡/
+match ZenkakuSpace /ã€€/
 
 
-" ToDo: »ÈÍÑ¤¹¤ëplugin¤òÀ°Íı
+" ToDo: ä½¿ç”¨ã™ã‚‹pluginã‚’æ•´ç†
 
-" format.vim : ÆüËÜ¸ìÀ°·Á¥¹¥¯¥ê¥×¥ÈÍÑ¤ÎÀßÄê
-let format_allow_over_tw = 1	" ¤Ö¤é²¼¤ê²ÄÇ½Éı
+" format.vim : æ—¥æœ¬èªæ•´å½¢ã‚¹ã‚¯ãƒªãƒ—ãƒˆç”¨ã®è¨­å®š
+let format_allow_over_tw = 1	" ã¶ã‚‰ä¸‹ã‚Šå¯èƒ½å¹…
 
 
 " showmarks http://www.vim.org/script.php?script_id=152
@@ -627,7 +627,7 @@ highlight ShowMarksHLm ctermfg=blue ctermbg=black guifg=red guibg=green
 "imap <F12> <C-O>:ShowMarksToggle<CR>
 
 
-" clipboard ÌµÌ¾¥ì¥¸¥¹¥¿¤ËÆş¤ë¥Ç¡¼¥¿¤ò *¥ì¥¸¥¹¥¿¤Ë¤âÆş¤ì¤ë
+" clipboard ç„¡åãƒ¬ã‚¸ã‚¹ã‚¿ã«å…¥ã‚‹ãƒ‡ãƒ¼ã‚¿ã‚’ *ãƒ¬ã‚¸ã‚¹ã‚¿ã«ã‚‚å…¥ã‚Œã‚‹
 " set clipboard+=unnamed
 
 
