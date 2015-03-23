@@ -86,34 +86,76 @@ autoload -U compinit
 compinit
 
 compdef _gcc clang33
-compdef _gcc c++46
-#compdef cpp46
-compdef _gcc g++46
+compdef _gcc clang34
+compdef _gcc clang35
+compdef _gcc clang36
+
+compdef _gcc clang++33
+compdef _gcc clang++34
+compdef _gcc clang++35
+compdef _gcc clang++36
+
 compdef _gcc gcc46
-#compdef gcov46
-#compdef gfortran46
-compdef _gcc x86_64-portbld-freebsd9.1-c++46
-compdef _gcc x86_64-portbld-freebsd9.1-g++46
-compdef _gcc x86_64-portbld-freebsd9.1-gcc-4.6.3
-compdef _gcc x86_64-portbld-freebsd9.1-gcc46
-#compdef x86_64-portbld-freebsd9.1-gfortran46
-compdef _gcc c++49
-#compdef cpp49
-compdef _gcc g++49
-#compdef gcc-ar49
-compdef _nm gcc-nm49
-compdef _ranlib gcc-ranlib49
+compdef _gcc gcc47
+compdef _gcc gcc48
 compdef _gcc gcc49
-#compdef gcov49
-#compdef gfortran49
-compdef _gcc x86_64-portbld-freebsd9.1-c++49
-compdef _gcc x86_64-portbld-freebsd9.1-g++49
-compdef _gcc x86_64-portbld-freebsd9.1-gcc-4.9.0
-#compdef x86_64-portbld-freebsd9.1-gcc-ar49
-compdef _nm x86_64-portbld-freebsd9.1-gcc-nm49
-compdef _ranlib x86_64-portbld-freebsd9.1-gcc-ranlib49
-compdef _gcc x86_64-portbld-freebsd9.1-gcc49
-#compdef x86_64-portbld-freebsd9.1-gfortran49
+compdef _gcc gcc5
+
+compdef _gcc g++46
+compdef _gcc g++47
+compdef _gcc g++48
+compdef _gcc g++49
+compdef _gcc g++5
+
+#cc
+
+compdef _gcc c++46
+compdef _gcc c++47
+compdef _gcc c++48
+compdef _gcc c++49
+compdef _gcc c++5
+
+#compdef _ar gcc-ar46
+#compdef _ar gcc-ar47
+#compdef _ar gcc-ar48
+#compdef _ar gcc-ar49
+#compdef _ar gcc-ar5
+
+compdef _nm gcc-nm46
+compdef _nm gcc-nm47
+compdef _nm gcc-nm48
+compdef _nm gcc-nm49
+compdef _nm gcc-nm5
+
+compdef _ranlib gcc-ranlib46
+compdef _ranlib gcc-ranlib47
+compdef _ranlib gcc-ranlib48
+compdef _ranlib gcc-ranlib49
+compdef _ranlib gcc-ranlib5
+
+compdef _gcc    x86_64-portbld-freebsd10.1-c++48
+compdef _gcc    x86_64-portbld-freebsd10.1-g++48
+compdef _gcc    x86_64-portbld-freebsd10.1-gcc-4.8.5
+#compdef _ar     x86_64-portbld-freebsd10.1-gcc-ar48
+compdef _nm     x86_64-portbld-freebsd10.1-gcc-nm48
+compdef _ranlib x86_64-portbld-freebsd10.1-gcc-ranlib48
+compdef _gcc    x86_64-portbld-freebsd10.1-gcc48
+
+compdef _gcc    x86_64-portbld-freebsd10.1-c++49
+compdef _gcc    x86_64-portbld-freebsd10.1-g++49
+compdef _gcc    x86_64-portbld-freebsd10.1-gcc-4.9.3
+#compdef _ar     x86_64-portbld-freebsd10.1-gcc-ar49
+compdef _nm     x86_64-portbld-freebsd10.1-gcc-nm49
+compdef _ranlib x86_64-portbld-freebsd10.1-gcc-ranlib49
+compdef _gcc    x86_64-portbld-freebsd10.1-gcc49
+
+compdef _gcc    x86_64-portbld-freebsd10.1-c++5
+compdef _gcc    x86_64-portbld-freebsd10.1-g++5
+compdef _gcc    x86_64-portbld-freebsd10.1-gcc-5.0.0
+#compdef _ar     x86_64-portbld-freebsd10.1-gcc-ar5
+compdef _nm     x86_64-portbld-freebsd10.1-gcc-nm5
+compdef _ranlib x86_64-portbld-freebsd10.1-gcc-ranlib5
+compdef _gcc    x86_64-portbld-freebsd10.1-gcc5
 
 setopt complete_aliases
 
