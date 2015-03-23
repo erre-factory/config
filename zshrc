@@ -43,7 +43,11 @@ alias mv='nocorrect mv'       # no spelling correction on mv
 
 alias cflow="cflow -ACGP" # -g : graphviz dot
 alias df='df -h'
-alias diff=colordiff
+if [[ -x /usr/local/bin/git ]]; then
+    alias diff='git diff'
+elif [[ -x /usr/local/bin/colordiff ]]; then
+    alias diff=colordiff
+fi
 alias du='du -h'
 if [[ -x /usr/local/bin/grep ]]; then
     # GNU grep
