@@ -56,20 +56,24 @@ else
     # GNU grep old version
     alias grep='grep --color=auto'
 fi
-alias less='lv -c'
+if [[ -x /usr/local/bin/lv ]]; then
+    alias less='lv'
+    alias lv='lv -c'
+else
+    alias lv=less
+fi
 # FreeBSD ls
 alias ls='ls -w -G'
 # FSF coreutils ls
 #alias ls='ls --color'
-alias lv='lv -c'
 if [[ -x /usr/local/bin/gtar ]]; then
     alias tar=gtar
 fi
 
-alias -s c=lv
-alias -s h=lv
-alias -s sh=lv
-alias -s txt=lv
+alias -s c=less
+alias -s h=less
+alias -s sh=less
+alias -s txt=less
 
 
 # key bind
