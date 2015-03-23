@@ -11,8 +11,7 @@
 #
 
 # Set up Environment Variable
-export LANG=ja_JP.eucJP
-#export LANG=ja_JP.UTF-8
+export LANG=ja_JP.UTF-8
 
 export EDITOR=vim
 #export JLESSCHARSET="japanese"
