@@ -70,8 +70,13 @@ alias -s txt=lv
 bindkey -e
 
 # compinit
-# git-completion.bash
-# git-completion.zsh -> _git
+#
+# git-completion.bash -> ~/.zsh/completion/git-completion.bash
+# git-completion.zsh -> ~/.zsh/completion/_git
+#
+# cd github && https://github.com/zsh-users/zsh-completions.git
+#
+# rm -f ~/.zcompdump; compinit
 fpath=(~/.zsh/completion ~/github/zsh-completions/src $fpath)
 
 # Setup new style completion system. To see examples of the old style (compctl
