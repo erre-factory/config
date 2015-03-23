@@ -15,14 +15,14 @@ export LANG=ja_JP.eucJP
 #export LANG=ja_JP.UTF-8
 
 export EDITOR=vim
-export JLESSCHARSET="japanese"
-export JLESSGLOBALTAGS="global"
+#export JLESSCHARSET="japanese"
+#export JLESSGLOBALTAGS="global"
 export LESS="--tabs=global"
 export PAGER=lv
 export UIM_FEP="anthy"
 
-export CVS_RSH="ssh"
-export CVSEDITOR="vim"
+#export CVS_RSH="ssh"
+#export CVSEDITOR="vim"
 
 
 # This kludge can be used to override some installations that put aliases for
