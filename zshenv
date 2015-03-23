@@ -17,7 +17,7 @@ export LANG=ja_JP.eucJP
 export EDITOR=vim
 #export JLESSCHARSET="japanese"
 #export JLESSGLOBALTAGS="global"
-export LESS="--tabs=global"
+export LESSGLOBALTAGS="global"
 export PAGER=lv
 export UIM_FEP="anthy"
 
