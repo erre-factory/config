@@ -62,7 +62,9 @@ alias ls='ls -w -G'
 # FSF coreutils ls
 #alias ls='ls --color'
 alias lv='lv -c'
-alias tar=gtar
+if [[ -x /usr/local/bin/gtar ]]; then
+    alias tar=gtar
+fi
 
 alias -s c=lv
 alias -s h=lv
