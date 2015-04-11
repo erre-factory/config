@@ -29,8 +29,8 @@
 # ログインシェルとして起動されたzshからログアウトする場合
 # 1 ~/.zlogout
 
-path=(/opt/bin $path)
-typeset -U path
+path=(/opt/bin $path /usr/local/share/git-core/contrib/diff-highlight(N-/))
+
 
 #watch=(notme)                   # watch for everybody but me
 #WATCHFMT='%n %a %l from %m at %t.'
@@ -87,7 +87,7 @@ bindkey -e
 # cd github && https://github.com/zsh-users/zsh-completions.git
 #
 # rm -f ~/.zcompdump; compinit
-fpath=(~/.zsh/completion ~/github/zsh-completions/src $fpath)
+fpath=(~/.zsh/completion(-N/) ~/github/zsh-completions/src(-N/) $fpath)
 
 # Setup new style completion system. To see examples of the old style (compctl
 # based) programmable completion, check Misc/compctl-examples in the zsh
@@ -286,8 +286,6 @@ cons25)
     }
     ;;
 esac
-
-[ -f /usr/local/share/git-core/contrib/diff-highlight/diff-highlight ] && path=($path /usr/local/share/git-core/contrib/diff-highlight)
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
