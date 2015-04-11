@@ -291,3 +291,10 @@ esac
 
 [ -f ~/.zshrc.experimental ] && source ~/.zshrc.experimental
 
+#[ -z "$ld_library_path" ] && typeset -xT LD_LIBRARY_PATH ld_library_path
+#[ -z "$include" ] && typeset -xT INCLUDE include
+typeset -U path cdpath fpath manpath ld_library_path include
+
+#ld_library_path=(${HOME}/lib(N-/) $ld_library_path)
+#include=(${HOME}/include(N-/) $include)
+
