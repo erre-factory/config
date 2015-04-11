@@ -92,6 +92,8 @@ fpath=(~/.zsh/completion(-N/) ~/github/zsh-completions/src(-N/) $fpath)
 # Setup new style completion system. To see examples of the old style (compctl
 # based) programmable completion, check Misc/compctl-examples in the zsh
 # distribution.
+#
+# see also zshcompsys(1)
 autoload -U compinit
 compinit
 
