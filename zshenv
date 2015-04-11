@@ -18,6 +18,9 @@ export EDITOR=vim
 #export JLESSCHARSET="japanese"
 #export JLESSGLOBALTAGS="global"
 export LESSGLOBALTAGS="global"
+export LESS="--RAW-CONTROL-CHARS -g -j10 --no-init --quit-if-one-screen"
+#export LESSOPEN="|/usr/local/bin/lesspipe.sh %s"
+export LESSOPEN="|/usr/local/bin/src-hilite-lesspipe.sh %s"
 export PAGER=lv
 export UIM_FEP="anthy"
 
