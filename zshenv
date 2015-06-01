@@ -12,7 +12,7 @@
 
 # Set up Environment Variable
 export LANG=ja_JP.UTF-8
-export LC_MESSAGE=C
+export LC_MESSAGES=C
 
 export EDITOR=vim
 #export JLESSCHARSET="japanese"
