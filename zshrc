@@ -100,6 +100,13 @@ compinit
 # no completion
 #compdef _nothing foo
 
+# zsh-completions
+compdef -d gas # not gnu as
+compdef -d logger
+#compdef -d ps
+compdef -d shutdown
+compdef -d watch
+
 
 compdef _gdb gdb79
 
