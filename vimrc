@@ -37,9 +37,9 @@
 "   ++nobin : nobinary
 "
 " e ++ff={unix,dos.mac}
-" e ++enc={utf-8,euc-jp,...}
+" e ++enc={utf-8,euc-jp,cp932,...}
 " B
-" w ++enc={utf-8,euc-jp,...} filename
+" w ++enc={utf-8,euc-jp,cp932,...} filename
 
 "set encoding=japan
 if has('iconv')
