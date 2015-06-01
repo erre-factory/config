@@ -107,6 +107,38 @@ compdef -d logger
 compdef -d shutdown
 compdef -d watch
 
+# functions/Completion/Unix
+#compdef -d arp
+#compdef -d cat
+#compdef -d chmod
+#compdef -d chown
+#compdef -d cp
+#compdef -d cut
+#compdef -d date
+#compdef -d dd
+#compdef -d du
+#compdef -d env
+#compdef -d find
+#compdef -d id
+#? compdef -d ifconfig
+#compdef -d ldd
+#compdef -d ln
+#compdef -d ls
+#compdef -d make
+#? compdef -d mount
+#? compdef -d netcat
+#compdef -d nice
+#? compdef -d od
+#? compdef -d ping
+#? compdef -d sed
+#? compdef -d sort
+#compdef -d su
+#compdef -d sysctl
+#? compdef -d tmux
+#compdef -d units
+compdef -d whois
+#compdef -d xargs
+
 
 compdef _gdb gdb79
 
