@@ -97,6 +97,8 @@ fpath=(~/.zsh/completion(-N/) ~/github/zsh-completions/src(-N/) $fpath)
 autoload -U compinit
 compinit
 
+compdef _gdb gdb79
+
 compdef _gcc clang33
 compdef _gcc clang34
 compdef _gcc clang35
