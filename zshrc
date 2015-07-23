@@ -56,6 +56,7 @@ else
     # GNU grep old version
     alias grep='grep --color=auto'
 fi
+alias hexdump="hexdump -v  -e '\"%08.8_Ax\n\"' -e '\"%08.8_ax \" 8/1 \"%02x \"' -e '\" |\" 8/1 \"%_p\" \"|\n\"'"
 if [[ -x /usr/local/bin/lv ]]; then
     alias less='lv'
     alias lv='lv -c'
@@ -69,6 +70,7 @@ alias ls='ls -w -G'
 if [[ -x /usr/local/bin/gtar ]]; then
     alias tar=gtar
 fi
+alias od='od -v -A x -t x1'
 
 alias -s c=less
 alias -s h=less
