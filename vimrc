@@ -531,7 +531,7 @@ set undodir=.vimundo
 
 ""shellpipe
 "makeef
-set grepprg=git\ grep\ --no-index\ -I\ --line-number
+"set grepprg=git\ grep\ --no-index\ -I\ --line-number
 "grepformat
 
 
