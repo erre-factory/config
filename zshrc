@@ -56,7 +56,15 @@ else
     # GNU grep old version
     alias grep='grep --color=auto'
 fi
+alias gstat='sudo gstat -d -o -p -I 1s' # -I 500ms
 alias hexdump="hexdump -v  -e '\"%08.8_Ax\n\"' -e '\"%08.8_ax \" 8/1 \"%02x \"' -e '\" |\" 8/1 \"%_p\" \"|\n\"'"
+#iostat | awk -v datecmd="LANG=C date" '/^ /{ datecmd | getline date; print date; close(datecmd) } { print $0 }'
+#alias iostat='iostat -h -C -dx    -w 1'
+alias iostat='iostat     -C -dx    -w 1' # -w 0.5
+#alias iostat='iostat    -C -dx -I -w 1' # -w 0.5
+# Linux iostat
+# S_TIME_FORMAT
+#alias iostat='iostat -c -d -k|m -t -x [ interval [ count ] ]'
 if [[ -x /usr/local/bin/lv ]]; then
     alias less='lv'
     alias lv='lv -c'
