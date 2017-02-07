@@ -84,7 +84,7 @@ alias seq='seq -f %.f'
 
 alias -s c=less
 alias -s h=less
-alias -s sh=less
+#alias -s sh=less
 alias -s txt=less
 
 
