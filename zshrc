@@ -80,6 +80,7 @@ if [[ -x /usr/local/bin/gtar ]]; then
     alias tar=gtar
 fi
 alias od='od -v -A x -t x1'
+alias seq='seq -f %.f'
 
 alias -s c=less
 alias -s h=less
