@@ -56,6 +56,7 @@ else
     # GNU grep old version
     alias grep='grep --color=auto'
 fi
+alias fstat='fstat -m'
 alias gstat='sudo gstat -d -o -p -I 1s' # -I 500ms
 alias hexdump="hexdump -v  -e '\"%08.8_Ax\n\"' -e '\"%08.8_ax \" 8/1 \"%02x \"' -e '\" |\" 8/1 \"%_p\" \"|\n\"'"
 #iostat | awk -v datecmd="LANG=C date" '/^ /{ datecmd | getline date; print date; close(datecmd) } { print $0 }'
